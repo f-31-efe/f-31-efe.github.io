@@ -131,6 +131,31 @@ hesabınızın ve tüm sıralama kayıtlarınızın silinmesini isteyebilirsiniz
 Veriler Google'ın sunucularında barındırılır ve
 <a href="https://firebase.google.com/support/privacy">Firebase gizlilik şartlarına</a> tabidir.</p>
 
+<h2>2c. Harita modu (isteğe bağlı)</h2>
+<p>Harita modu <strong>OpenStreetMap</strong> döşemelerini kullanır. Açtığınızda cihazınız
+döşeme sunucusuna doğrudan bağlanır ve bu bağlantıda sunucu teknik olarak şunları görür:</p>
+<ul>
+<li><strong>IP adresiniz</strong> (her internet bağlantısında olduğu gibi),</li>
+<li>istenen döşemenin <strong>koordinatı ve yakınlaştırma düzeyi</strong> — yani kabaca
+nerede olduğunuz,</li>
+<li>uygulamayı tanıtan bir <strong>User-Agent</strong> metni (uygulama adı ve iletişim e-postası).</li>
+</ul>
+<p>Bu bağlantı doğrudan cihazınız ile döşeme sunucusu arasındadır; <strong>bize hiçbir veri
+gelmez</strong>. Döşemeler cihazınızda önbelleğe alınır (yaklaşık 40 MB sınırla) ve
+<em>Ayarlar → Harita önbelleği → Sıfırla</em> ile silinebilir.</p>
+<p><strong>Harita modunu hiç açmazsanız uygulama tamamen çevrimdışı çalışır</strong>;
+tek dokunuşla <em>Ayarlar → Harita modu</em>'ndan kapatabilirsiniz.
+Harita verisi © OpenStreetMap katkıcıları,
+<a href="https://opendatacommons.org/licenses/odbl/">ODbL</a> lisanslıdır.</p>
+
+<h2>2d. Cihaz sensörleri</h2>
+<p>"Sensör destekli hız" ayarı açıkken uygulama cihazın <strong>ivmeölçer, jiroskop ve
+yerçekimi</strong> sensörlerini okur. Bunun tek amacı, saniyede bir gelen GPS güncellemeleri
+<em>arasındaki</em> hızı tahmin ederek göstergenin daha akıcı tepki vermesidir.</p>
+<p>Sensör verileri <strong>yalnızca anlık olarak bellekte</strong> işlenir; kaydedilmez,
+saklanmaz ve hiçbir yere gönderilmez. Bu sensörler Android'de özel izin gerektirmez.
+Ayarlardan kapatabilirsiniz; kapalıyken hız yalnızca GPS'ten hesaplanır.</p>
+
 <h2>3. Konum izni</h2>
 <p>Uygulama <code>ACCESS_FINE_LOCATION</code> ve <code>ACCESS_COARSE_LOCATION</code> izinlerini ister.
 Hassas (GPS) konum, hızın doğru ölçülmesi için <strong>zorunludur</strong>; yaklaşık konumla hız ölçümü
@@ -297,6 +322,30 @@ your account and all leaderboard records; requests are handled within 30 days.</
 <p>Processor: <strong>Google Firebase</strong> (Authentication + Cloud Firestore). Data is hosted
 on Google's servers under the
 <a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a>.</p>
+
+<h2>2c. Map mode (optional)</h2>
+<p>Map mode uses <strong>OpenStreetMap</strong> tiles. When you enable it, your device
+connects directly to a tile server, which technically sees:</p>
+<ul>
+<li>your <strong>IP address</strong> (as with any internet connection),</li>
+<li>the <strong>coordinates and zoom level</strong> of each requested tile — i.e. roughly where you are,</li>
+<li>a <strong>User-Agent</strong> string identifying the app (name and contact email).</li>
+</ul>
+<p>This connection is directly between your device and the tile server; <strong>no data
+reaches us</strong>. Tiles are cached on your device (about a 40 MB limit) and can be
+deleted with <em>Settings → Map cache → Reset</em>.</p>
+<p><strong>If you never enable map mode the app runs fully offline</strong>; you can turn it
+off with one tap in <em>Settings → Map mode</em>. Map data is © OpenStreetMap contributors,
+licensed under <a href="https://opendatacommons.org/licenses/odbl/">ODbL</a>.</p>
+
+<h2>2d. Device sensors</h2>
+<p>When "Sensor-assisted speed" is enabled the app reads the device's
+<strong>accelerometer, gyroscope and gravity</strong> sensors. The only purpose is to
+estimate speed <em>between</em> the once-per-second GPS updates so the readout responds
+more smoothly.</p>
+<p>Sensor data is processed <strong>in memory only</strong>; it is never recorded, stored or
+transmitted. These sensors require no special Android permission. You can disable the
+feature in Settings; speed is then derived from GPS alone.</p>
 
 <h2>3. Location permission</h2>
 <p>The app requests <code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code>.
