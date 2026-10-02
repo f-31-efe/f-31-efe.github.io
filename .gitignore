@@ -1,0 +1,22 @@
+# Godot 4 cache
+.godot/
+
+# Android / Gradle build state
+android/**/build/
+android/.gradle/
+android/**/.gradle/
+android/**/.kotlin/
+android/local.properties
+# Godot Android build template (Proje > Android Build Template)
+android/build/
+android/.build_version
+
+# Export output
+build/
+
+# Signing keys — never commit
+*.keystore
+*.jks
+
+# OS
+.DS_Store

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+
+    <application>
+        <!--
+            Godot v2 eklenti tanımı.
+            godotPluginName → getPluginName() ile aynı olmalıdır: "SvQrScanner"
+            godotPluginPackageName → init sınıfının paketi.
+        -->
+        <meta-data
+            android:name="org.godotengine.plugin.v2.${godotPluginName}"
+            android:value="${godotPluginPackageName}.QrScannerPlugin" />
+
+        <!-- Canlı tarama ekranı -->
+        <activity
+            android:name="com.silviagames.qrscanner.ScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|smallestScreenSize"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
+
+        <!--
+            Not: PNG/CSV paylaşımı için Godot kütüphanesinin FileProvider'ı
+            kullanılır (${applicationId}.fileprovider + @xml/godot_provider_paths,
+            files-root içerir) — ayrı provider tanımlamak manifest birleştirmesini
+            bozar.
+        -->
+    </application>
+</manifest>

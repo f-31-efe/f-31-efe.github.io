@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası – QR Master</title>
+<style>
+  body{font-family:Arial,Helvetica,sans-serif;max-width:820px;margin:40px auto;padding:0 18px;color:#1a1a1a;line-height:1.65;background:#fff}
+  h1{font-size:28px;color:#0a0e1a}h2{font-size:20px;margin-top:28px}
+  a{color:#0f9e91}
+  .muted{color:#666;font-size:14px}
+  [hidden]{display:none}
+  nav{display:flex;gap:8px;margin:18px 0}
+  nav button{padding:8px 16px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:8px;cursor:pointer;font-size:15px}
+  nav button[aria-selected="true"]{background:#0a0e1a;color:#4fd1c5;border-color:#0a0e1a}
+</style>
+</head>
+<body>
+<h1>Gizlilik Politikası</h1>
+<p class="muted">Uygulama: <strong>QR Master — Tarayıcı &amp; Oluşturucu</strong> &nbsp;•&nbsp; Geliştirici: <strong>Silvia Games</strong> &nbsp;•&nbsp; Güncelleme: 2 Ekim 2026</p>
+
+<nav>
+  <button id="btn-tr" aria-selected="true" onclick="pick('tr')">Türkçe</button>
+  <button id="btn-en" aria-selected="false" onclick="pick('en')">English</button>
+</nav>
+
+<section id="tr">
+<p>QR Master gizliliğinize saygı duyar. Bu politika, uygulamayı kullandığınızda hangi bilgilere erişildiğini açıklar.</p>
+
+<h2>1. Toplanan veriler</h2>
+<p>QR Master <strong>hesap gerektirmez</strong> ve <strong>kişisel olarak tanımlanabilir bilgi toplamaz</strong>. Tarama geçmişi, oluşturulan QR kodları ve tercihleriniz <strong>yalnızca cihazınızda</strong> saklanır; sunucuya gönderilmez. Tarama sırasında kamera görüntüsü işlenir ve <strong>anında yok edilir</strong> — kayıt altına alınmaz.</p>
+
+<h2>2. İzinler</h2>
+<ul>
+  <li><strong>Kamera:</strong> yalnızca QR/barkod okumak için kullanılır.</li>
+  <li><strong>Vibrasyon:</strong> kod bulunduğunda geri bildirim için.</li>
+</ul>
+
+<h2>3. Üçüncü taraf hizmetler</h2>
+<ul>
+  <li><strong>Google AdMob</strong> reklamları gösterir; reklam kimliği ve cihaz bilgisi gibi veriler Google tarafından toplanabilir.
+    Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites">Google'ın gizlilik politikası</a>.</li>
+  <li>Barkod çözümleme <strong>Google ML Kit</strong> ile <strong>cihaz üzerinde</strong> çalışır; görüntüler çevrimdışı işlenir.</li>
+</ul>
+
+<h2>4. Reklam kimliği</h2>
+<p>Reklam kişiselleştirmesi için cihazın reklam kimliği kullanılabilir. Android ayarları → Google → Reklamlar bölümünden sıfırlayabilir veya kişiselleştirmeyi kapatabilirsiniz.</p>
+
+<h2>5. Çocukların gizliliği</h2>
+<p>Uygulama 13 yaş altı çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
+
+<h2>6. Güvenlik ve saklama</h2>
+<p>Tüm uygulama verileri yereldir; istediğiniz zaman Ayarlar → Geçmişi Sil ile kalıcı olarak silebilirsiniz. Uygulamayı kaldırmanız tüm verileri siler.</p>
+
+<h2>7. Değişiklikler</h2>
+<p>Bu politika zaman zaman güncellenebilir; sürüm tarihi yukarıdadır.</p>
+
+<h2>8. İletişim</h2>
+<p>Sorularınız için: <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+
+<section id="en" hidden>
+<p>QR Master respects your privacy. This policy explains what information is accessed when you use the app.</p>
+
+<h2>1. Information we collect</h2>
+<p>QR Master <strong>does not require an account</strong> and <strong>does not collect personally identifiable information</strong>. Scan history, generated QR codes and preferences are stored <strong>only on your device</strong> and are never uploaded. Camera frames are processed for scanning and <strong>immediately discarded</strong> — no video or images are retained.</p>
+
+<h2>2. Permissions</h2>
+<ul>
+  <li><strong>Camera:</strong> used solely to read QR codes and barcodes.</li>
+  <li><strong>Vibration:</strong> feedback when a code is detected.</li>
+</ul>
+
+<h2>3. Third-party services</h2>
+<ul>
+  <li><strong>Google AdMob</strong> serves advertisements; Google may collect the advertising ID and device information.
+    Details: <a href="https://policies.google.com/technologies/partner-sites">Google's privacy policy</a>.</li>
+  <li>Barcode decoding runs on-device via <strong>Google ML Kit</strong>; images are processed offline.</li>
+</ul>
+
+<h2>4. Advertising ID</h2>
+<p>The device advertising ID may be used for personalized ads. You can reset it or opt out under Android Settings → Google → Ads.</p>
+
+<h2>5. Children's privacy</h2>
+<p>The app is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+<h2>6. Security and retention</h2>
+<p>All data is local. You can delete it at any time from Settings → Delete history, and uninstalling the app removes all data.</p>
+
+<h2>7. Changes</h2>
+<p>This policy may be updated; the revision date is shown above.</p>
+
+<h2>8. Contact</h2>
+<p><a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+
+<script>
+function pick(l){
+  document.getElementById('tr').hidden = (l !== 'tr');
+  document.getElementById('en').hidden = (l !== 'en');
+  document.getElementById('btn-tr').setAttribute('aria-selected', l === 'tr');
+  document.getElementById('btn-en').setAttribute('aria-selected', l === 'en');
+  document.documentElement.lang = l;
+}
+if ((navigator.language || '').slice(0, 2) !== 'tr') pick('en');
+</script>
+</body>
+</html>
