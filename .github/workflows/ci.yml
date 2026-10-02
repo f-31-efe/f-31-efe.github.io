@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Godot smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GODOT_VERSION: 4.7.2-stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Godot binary
+        uses: actions/cache@v4
+        with:
+          path: ~/godot-bin
+          key: godot-${{ env.GODOT_VERSION }}-linux-x86_64
+
+      - name: Setup Godot
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/godot-bin"
+          GODOT_BIN="$HOME/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64"
+          if [ ! -x "$GODOT_BIN" ]; then
+            curl -fsSL -o /tmp/godot.zip \
+              "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+            unzip -q /tmp/godot.zip -d "$HOME/godot-bin"
+          fi
+          chmod +x "$GODOT_BIN"
+
+      - name: Import project resources
+        run: |
+          set -euo pipefail
+          "$HOME/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64" --headless --import
+
+      - name: Run smoke tests
+        run: |
+          set -euo pipefail
+          "$HOME/godot-bin/Godot_v${GODOT_VERSION}_linux.x86_64" --headless -s res://tests/smoke.gd
