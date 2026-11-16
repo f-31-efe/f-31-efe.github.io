@@ -37,8 +37,9 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
 <section id="tr" lang="tr">
 <h1>FORGE — Gizlilik Politikası</h1>
 <p class="sub">Son güncelleme: 16 Kasım 2026 · Silvia Studios · <code>com.silviastudios.forge</code></p>
-<div class="lead"><strong>Kısaca:</strong> FORGE'un sunucusu, hesabı, reklamı ve analitiği yoktur.
-Girdiğiniz antrenman ve profil bilgileri yalnızca telefonunuzda saklanır. İnternete yalnızca
+<div class="lead"><strong>Kısaca:</strong> FORGE'un sunucusu, hesabı ve analitiği yoktur.
+Girdiğiniz antrenman ve profil bilgileri yalnızca telefonunuzda saklanır. Ücretsiz sürüm Google AdMob
+reklamları gösterir (FORGE Plus'ta reklam yoktur); reklam için Google cihaz bilgisi ve reklam kimliği işler. İnternete yalnızca
 aşağıda sayılan durumlarda — çoğu sizin isteğinizle — çıkılır.</div>
 
 <h2>1. Cihazınızda saklanan veriler</h2>
@@ -71,22 +72,36 @@ boy, kilo, hedef, seviye, haftalık gün/süre, ekipman, sakatlık notu, son 7 g
 ve hareket kataloğu adları. İstek doğrudan cihazınızdan sağlayıcıya gider; FORGE'un arada bir sunucusu
 yoktur. Bu veriler o sağlayıcının kendi gizlilik koşullarına tabidir. Özellik varsayılan olarak kapalıdır,
 anahtar yalnızca cihazınızda saklanır ve Ayarlar'dan tek dokunuşla silinir.</td></tr>
+<tr><td>Reklamlar — <em>yalnızca ücretsiz sürümde</em></td><td>Google AdMob (Google Mobile Ads SDK) ve Google Kullanıcı Mesajlaşma Platformu (UMP)</td>
+<td>Reklam kimliği (Advertising ID), IP adresi, cihaz ve uygulama bilgileri (model, işletim sistemi sürümü, dil),
+reklam etkileşimleri ve kaba konum (IP'den). Bu veriler reklam göstermek, reklam ölçümü ve dolandırıcılık
+önleme için Google tarafından toplanır; Google bu işlemede veri işleyen/bağımsız sorumlu olarak kendi
+politikalarına tabidir. Antrenman, profil ve sağlık verileriniz reklam ağına <strong>gönderilmez</strong>.</td></tr>
 <tr><td>"Videoda izle" düğmesi</td><td>YouTube (tarayıcıda açılır)</td>
 <td>Yalnızca hareketin İngilizce adıyla bir arama sayfası açılır; uygulama veri göndermez.</td></tr>
 <tr><td>Gizlilik politikası / kullanım koşulları bağlantısı</td><td><code>f-31-efe.github.io</code> (tarayıcıda)</td>
 <td>Bu sayfa. Uygulama veri göndermez.</td></tr>
 </table></div>
-<p>Bunların dışında ağ isteği yapılmaz. Fotoğraflar dışındaki tüm temel özellikler uçak modunda çalışır.</p>
+<p>Bunların dışında ağ isteği yapılmaz. Fotoğraflar ve reklamlar dışındaki tüm temel özellikler uçak modunda çalışır.</p>
 
-<h2>3. Analitik, reklam, takip</h2>
-<p>FORGE reklam göstermez; reklam kimliği (Advertising ID), analitik, çökme raporlama veya
-izleme aracı içermez. Kullanım davranışınız kaydedilmez ve kimseyle paylaşılmaz. Veri satılmaz.</p>
+<h2>3. Reklam, analitik, takip</h2>
+<p><strong>Reklamlar:</strong> FORGE'un ücretsiz sürümü Google AdMob ile banner (yalnızca liste ekranlarında,
+seans sırasında asla), antrenman sonrası geçiş reklamı ve isteğe bağlı ödüllü reklam gösterir. AdMob, reklam
+kimliğini ve cihaz bilgilerini reklam sunmak, sıklığı sınırlamak, ölçmek ve kötüye kullanımı önlemek için
+kullanır ve bunları Google ile paylaşır. Google'ın verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites?hl=tr">Google'ın iş ortağı sitelerindeki veri kullanımı</a>.</p>
+<p><strong>Rıza:</strong> Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de ilk açılışta Google UMP rıza
+formu gösterilir; kişiselleştirilmiş reklamı reddedebilirsiniz. Seçiminizi Ayarlar → "Reklam gizlilik tercihleri"
+ile değiştirebilirsiniz. Reklam kimliğini Android ayarlarından (Gizlilik → Reklamlar) sıfırlayabilir veya
+silebilirsiniz. İçerik sınırı PG olarak ayarlıdır.</p>
+<p><strong>FORGE Plus</strong> abonelerinde ve ömür boyu sahiplerinde reklam SDK'sı reklam istemez.
+FORGE analitik veya çökme raporlama aracı içermez; antrenman verileriniz reklam ağıyla paylaşılmaz, veri satılmaz.</p>
 
 <h2>4. İzinler</h2>
 <div class="tablewrap"><table>
 <tr><th>İzin</th><th>Neden</th></tr>
-<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Fotoğraf indirme, Play faturalandırma, isteğe bağlı koç bağlantısı</td></tr>
-<tr><td>POST_NOTIFICATIONS</td><td>Uygulama arka plandayken dinlenme sayacı bitince bildirim (Android 13+'ta izin sorulur; reddedebilirsiniz)</td></tr>
+<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Fotoğraf indirme, Play faturalandırma, reklamlar, isteğe bağlı koç bağlantısı</td></tr>
+<tr><td>AD_ID (com.google.android.gms.permission.AD_ID)</td><td>Ücretsiz sürümde Google AdMob'un reklam kimliğini okuması</td></tr>
+<tr><td>POST_NOTIFICATIONS</td><td>Dinlenme sayacı bitince bildirim ve isteğe bağlı antrenman hatırlatması (planlı günlerde günde en fazla bir; Android 13+'ta izin sorulur, reddedebilir ya da Ayarlar'dan kapatabilirsiniz)</td></tr>
 <tr><td>WAKE_LOCK</td><td>Seans sırasında ekranın açık kalması ve sayaç bitişinin zamanında bildirilmesi</td></tr>
 <tr><td>VIBRATE</td><td>Set onayı ve sayaç sonu titreşimi</td></tr>
 <tr><td>BILLING</td><td>FORGE Plus satın alımı</td></tr>
@@ -133,8 +148,9 @@ koşulları Google Play politikalarına tabidir. Ömür boyu seçeneği tek sefe
 <section id="en" lang="en" hidden>
 <h1>FORGE — Privacy Policy</h1>
 <p class="sub">Last updated: 16 November 2026 · Silvia Studios · <code>com.silviastudios.forge</code></p>
-<div class="lead"><strong>In short:</strong> FORGE has no server, no account, no ads and no analytics.
-The workout and profile information you enter is stored only on your phone. The app goes online only
+<div class="lead"><strong>In short:</strong> FORGE has no server, no account and no analytics.
+The workout and profile information you enter is stored only on your phone. The free version shows
+Google AdMob ads (FORGE Plus is ad-free); to serve them Google processes device information and the advertising ID. The app goes online only
 in the cases listed below — most of them at your request.</div>
 
 <h2>1. Data stored on your device</h2>
@@ -168,22 +184,34 @@ group over the last 7 days and the names in the exercise catalog. The request go
 device to the provider; FORGE has no server in between. This data is subject to that provider's own privacy
 terms. The feature is off by default, the key is stored only on your device and can be deleted in Settings
 with one tap.</td></tr>
+<tr><td>Ads — <em>free version only</em></td><td>Google AdMob (Google Mobile Ads SDK) and Google User Messaging Platform (UMP)</td>
+<td>Advertising ID, IP address, device and app information (model, OS version, language), ad interactions
+and approximate location (derived from IP). Google collects this to serve and measure ads and to prevent
+fraud, acting under its own policies. Your workout, profile and health data are <strong>never</strong> sent to the ad network.</td></tr>
 <tr><td>"Watch a video" button</td><td>YouTube (opens in your browser)</td>
 <td>Only opens a search page for the exercise's English name; the app sends no data.</td></tr>
 <tr><td>Privacy policy / terms links</td><td><code>f-31-efe.github.io</code> (in your browser)</td>
 <td>This page. The app sends no data.</td></tr>
 </table></div>
-<p>No other network requests are made. Apart from photos, every core feature works in airplane mode.</p>
+<p>No other network requests are made. Apart from photos and ads, every core feature works in airplane mode.</p>
 
-<h2>3. Analytics, ads, tracking</h2>
-<p>FORGE shows no ads and contains no advertising ID, analytics, crash reporting or tracking tools.
-Your usage is not recorded or shared with anyone. No data is sold.</p>
+<h2>3. Ads, analytics, tracking</h2>
+<p><strong>Ads:</strong> the free version of FORGE uses Google AdMob to show a banner (on list screens only, never
+during a workout), an interstitial after a finished workout and an optional rewarded ad. AdMob uses the advertising
+ID and device information to serve ads, cap frequency, measure performance and prevent abuse, and shares this data
+with Google. How Google uses data: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+<p><strong>Consent:</strong> in the EEA, the UK and Switzerland a Google UMP consent form is shown on first launch;
+you can refuse personalised ads and change your choice later in Settings → "Ad privacy choices". You can reset or
+delete your advertising ID in Android settings (Privacy → Ads). Ad content is capped at PG.</p>
+<p><strong>FORGE Plus</strong> subscribers and lifetime owners get no ad requests. FORGE contains no analytics
+or crash-reporting tools; your workout data is never shared with the ad network and no data is sold.</p>
 
 <h2>4. Permissions</h2>
 <div class="tablewrap"><table>
 <tr><th>Permission</th><th>Why</th></tr>
-<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Photo downloads, Play Billing, optional coach connection</td></tr>
-<tr><td>POST_NOTIFICATIONS</td><td>A notification when the rest timer ends while the app is in the background (asked on Android 13+; you can decline)</td></tr>
+<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Photo downloads, Play Billing, ads, optional coach connection</td></tr>
+<tr><td>AD_ID (com.google.android.gms.permission.AD_ID)</td><td>Lets Google AdMob read the advertising ID in the free version</td></tr>
+<tr><td>POST_NOTIFICATIONS</td><td>Rest-timer alert and an optional workout reminder (planned days only, at most one a day; asked on Android 13+, you can decline or turn it off in Settings)</td></tr>
 <tr><td>WAKE_LOCK</td><td>Keeping the screen on during a session and delivering the timer alert on time</td></tr>
 <tr><td>VIBRATE</td><td>Vibration on set completion and when the timer ends</td></tr>
 <tr><td>BILLING</td><td>Buying FORGE Plus</td></tr>

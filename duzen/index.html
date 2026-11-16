@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Düzen — Gizlilik Politikası / Privacy Policy</title>
-<meta name="description" content="Düzen | Akıllı Depolama Asistanı gizlilik politikası. Tüm analiz cihazda yapılır; hiçbir veri toplanmaz veya paylaşılmaz.">
+<meta name="description" content="Düzen | Akıllı Depolama Asistanı gizlilik politikası. Dosya analizi cihazda yapılır; uygulama Google AdMob reklamları gösterir.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%230b1420'/%3E%3Ccircle cx='256' cy='256' r='159' fill='%23142638' stroke='%233ce0bb' stroke-width='12'/%3E%3Cpath d='M184 172h144M184 224h108M184 276h144M184 328h78' stroke='%23e8f1ed' stroke-width='20' stroke-linecap='round'/%3E%3Ccircle cx='340' cy='340' r='47' fill='%233ce0bb'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -28,6 +28,7 @@
     color: var(--text); text-decoration: none; background: var(--card); }
   section.policy { background: var(--card); border: 1px solid var(--line); border-radius: 18px;
     padding: 8px 22px 22px; margin-bottom: 28px; }
+  .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: .95rem; }
   th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
   th { color: var(--muted); font-weight: 600; }
@@ -50,77 +51,109 @@
 
   <section class="policy" id="tr" lang="tr">
     <h2>Gizlilik Politikası</h2>
-    <p class="sub">Yürürlük tarihi: 16 Kasım 2026 · Sürüm 1.0.0</p>
+    <p class="sub">Yürürlük tarihi: 16 Kasım 2026 · Uygulama sürümü 1.1.0</p>
 
-    <div class="box"><strong>Özet:</strong> Düzen tüm analizi cihazınızda yapar. Hiçbir kişisel veri, dosya, dosya adı veya analiz sonucu toplanmaz, geliştiriciye ya da üçüncü taraflara gönderilmez. Uygulama internet izni istemez; hesap, reklam ve analiz (analytics) aracı içermez.</div>
+    <div class="box"><strong>Özet:</strong> Düzen dosya analizini tamamen cihazınızda yapar; dosyalarınız, dosya adları ve analiz sonuçları geliştiriciye veya üçüncü taraflara gönderilmez. Uygulama ücretsizdir ve <strong>Google AdMob</strong> reklamları gösterir. Reklamlar için uygulama internete bağlanır ve Google; reklam kimliği, cihaz bilgileri ve IP adresi gibi verileri işler. Uygulamada hesap sistemi ve geliştiriciye ait sunucu yoktur.</div>
 
-    <h2>Uygulamanın işlediği bilgiler</h2>
+    <h2>1. Cihazda işlenen bilgiler (paylaşılmaz)</h2>
     <p>Düzen, Android'in medya kütüphanesindeki (MediaStore) fotoğraf, video ve ses dosyalarınız için şu bilgileri <strong>yalnızca cihazınızda</strong> okur: dosya adı, boyutu, oluşturulma/değiştirilme tarihi, türü ve bulunduğu klasör. Bu bilgilerle büyük dosyalar, ekran görüntüleri, WhatsApp/Telegram medyası ve eski indirmeler listelenir.</p>
-    <p>Birebir kopyaları bulmak için yalnızca aynı boyuttaki dosyaların içeriği cihazda okunur ve SHA-256 parmak izine dönüştürülür. Parmak izleri ve tarama sonuçları yalnızca uygulama açıkken bellekte tutulur; diske kaydedilmez ve cihazdan çıkmaz.</p>
+    <p>Birebir kopyaları bulmak için yalnızca aynı boyuttaki dosyaların içeriği cihazda okunur ve SHA-256 parmak izine dönüştürülür. Parmak izleri ve tarama sonuçları yalnızca uygulama açıkken bellekte tutulur; diske kaydedilmez ve cihazdan çıkmaz. Bu dosya bilgileri reklam amacıyla kullanılmaz ve reklam SDK'sına verilmez.</p>
     <p>Uygulama ayrıca dahili depolamanın toplam ve boş alanını (Android StatFs) gösterir.</p>
-    <p>Cihazınızda, yalnızca uygulamanın özel alanında şu tercihler saklanır: dil, vurgu rengi, hatırlatma günü/saati, son analiz zamanı ve son çöp kutusuna taşıma işleminin geri alınabilmesi için ilgili dosyaların sistem içi bağlantıları (MediaStore URI). Bu veriler uygulama kaldırıldığında veya Android ayarlarından uygulama verileri silindiğinde silinir.</p>
+    <p>Cihazınızda, yalnızca uygulamanın özel alanında şu tercihler saklanır: dil, vurgu rengi, titreşim tercihi, hatırlatma günü/saati, açılış sayısı (reklam sıklığını sınırlamak için), son analiz zamanı ve özeti (toplam boyut ve kopya grubu sayısı — haftalık hatırlatmanın yalnızca gerektiğinde gösterilmesi için) ve son çöp kutusuna taşıma işleminin geri alınabilmesi için ilgili dosyaların sistem içi bağlantıları (MediaStore URI). Bu veriler cihazdan çıkmaz; uygulama kaldırıldığında veya Android ayarlarından uygulama verileri silindiğinde silinir.</p>
 
-    <h2>Kullanılan izinler</h2>
-    <table>
+    <h2>2. Reklamlar (Google AdMob)</h2>
+    <p>Düzen'i ücretsiz sunabilmek için Google LLC'nin <strong>Google Mobile Ads SDK</strong> (AdMob) hizmetini kullanırız. Reklamlar liste ekranlarının altında banner olarak ve zaman zaman bir işlem tamamlandıktan sonra tam ekran olarak gösterilir. Reklam sunmak, sıklığını sınırlamak, ölçmek ve kötüye kullanımı önlemek için Google aşağıdaki verileri toplayabilir ve işleyebilir:</p>
+    <ul>
+      <li><strong>Reklam kimliği</strong> (Android Advertising ID) ve uygulama kümesi kimliği gibi cihaz tanımlayıcıları,</li>
+      <li><strong>Cihaz bilgileri</strong> (model, işletim sistemi sürümü, dil, ekran boyutu, ağ türü),</li>
+      <li><strong>IP adresi</strong> (bundan yaklaşık konum çıkarılabilir),</li>
+      <li>Reklam etkileşimleri (gösterim, tıklama) ve SDK'nın tanılama/performans verileri.</li>
+    </ul>
+    <p>Bu veriler Google tarafından, Google'ın kendi politikaları kapsamında işlenir; geliştirici bu verilere tek tek erişmez. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google, iş ortaklarının site ve uygulamalarındaki verileri nasıl kullanır</a> ve <a href="https://policies.google.com/privacy" rel="noopener">Google Gizlilik Politikası</a>.</p>
+    <p><strong>Rıza (UMP):</strong> Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre gibi gerekli bölgelerde, uygulama ilk açılışta Google'ın Kullanıcı Mesajlaşma Platformu (UMP) ile kişiselleştirilmiş reklam için rızanızı sorar. Seçiminizi istediğiniz zaman <em>Ayarlar &gt; Reklamlar ve gizlilik &gt; Reklam gizlilik tercihleri</em> bölümünden değiştirebilirsiniz. Rıza vermezseniz yalnızca sınırlı/kişiselleştirilmemiş reklamlar gösterilebilir.</p>
+    <p><strong>Reklam kimliğini kontrol etme:</strong> Android ayarlarında (Google &gt; Reklamlar veya Gizlilik &gt; Reklamlar) reklam kimliğinizi sıfırlayabilir veya silebilirsiniz.</p>
+    <p>Reklam içeriği en fazla "PG" (genel izleyici, ebeveyn rehberliği) derecesiyle sınırlandırılmıştır.</p>
+
+    <h2>3. Kullanılan izinler</h2>
+    <div class="table-wrap"><table>
       <tr><th>İzin</th><th>Amaç</th></tr>
       <tr><td><code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Fotoğraf, video ve ses dosyalarınızın boyut ve tarih bilgilerini analiz etmek; kopyaları cihazda karşılaştırmak; önizleme küçük resimleri göstermek.</td></tr>
       <tr><td><code>READ_EXTERNAL_STORAGE</code> (yalnızca Android 12L ve öncesi)</td><td>Aynı amaç; eski Android sürümlerinde medya okumanın tek yolu.</td></tr>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Yalnızca reklamları (Google AdMob) ve reklam rıza formunu yüklemek. Dosyalarınız veya analiz sonuçları internete gönderilmez.</td></tr>
+      <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Google AdMob'un reklam sunumu ve ölçümü için reklam kimliğini okuması.</td></tr>
       <tr><td><code>POST_NOTIFICATIONS</code></td><td>Yalnızca siz açarsanız haftalık depolama kontrolü hatırlatması göstermek.</td></tr>
       <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Telefon yeniden başladığında, açtığınız haftalık hatırlatmayı yeniden kurmak.</td></tr>
-    </table>
-    <p>Düzen, tüm dosyalara erişim (<code>MANAGE_EXTERNAL_STORAGE</code>), yüklü uygulamaları listeleme (<code>QUERY_ALL_PACKAGES</code>), konum, kişiler, kamera, mikrofon veya internet izni istemez. İzinleri istediğiniz zaman Android ayarlarından geri alabilirsiniz.</p>
+      <tr><td><code>VIBRATE</code></td><td>Dosya seçerken ve taşırken kısa dokunsal geri bildirim (Ayarlar'dan kapatılabilir).</td></tr>
+    </table></div>
+    <p>Düzen, tüm dosyalara erişim (<code>MANAGE_EXTERNAL_STORAGE</code>), yüklü uygulamaları listeleme (<code>QUERY_ALL_PACKAGES</code>), konum, kişiler, kamera veya mikrofon izni istemez. İzinleri istediğiniz zaman Android ayarlarından geri alabilirsiniz.</p>
 
-    <h2>Dosyaların silinmesi</h2>
+    <h2>4. Dosyaların silinmesi</h2>
     <p>Düzen hiçbir dosyayı kendiliğinden silmez. Seçtiğiniz dosyalar yalnızca Android'in kendi onay penceresinde izin verdiğinizde sistem çöp kutusuna taşınır (Android 11+). Çöp kutusundaki dosyalar Android tarafından yaklaşık 30 gün sonra kalıcı olarak silinir; bu süre içinde uygulamadaki "Geri al" düğmesiyle veya çöp kutusunu gösteren dosya/galeri uygulamalarıyla geri alınabilir. Android 10 ve öncesinde uygulama dosyayı yalnızca sistem uygulamasında açar; silme işlemini o uygulamada siz yaparsınız.</p>
 
-    <h2>Paylaşım, reklam ve analiz</h2>
-    <p>Düzen hiçbir veriyi geliştiriciye veya üçüncü taraflara aktarmaz, satmaz ya da paylaşmaz. Uygulamada reklam SDK'sı, analiz/çökme raporlama aracı, hesap sistemi veya sunucu yoktur. Bu nedenle Google Play "Veri güvenliği" bölümünde veri toplanmadığı ve paylaşılmadığı beyan edilir.</p>
+    <h2>5. Paylaşım ve satış</h2>
+    <p>Geliştirici hiçbir kişisel veriyi satmaz. Dosyalarınız, dosya adları ve analiz sonuçları kimseyle paylaşılmaz. Reklam için gereken cihaz tanımlayıcıları ve cihaz/ağ bilgileri, yukarıda açıklandığı gibi yalnızca reklam sağlayıcısı Google ile paylaşılır. Uygulamada ayrıca analiz (analytics) veya çökme raporlama aracı, hesap sistemi ya da geliştiriciye ait sunucu yoktur.</p>
 
-    <h2>Çocuklar</h2>
-    <p>Düzen çocuklara yönelik değildir ve hiçbir yaş grubundan kişisel veri toplamaz.</p>
+    <h2>6. Çocuklar</h2>
+    <p>Düzen 13 yaş ve üzeri genel kullanıcılar için tasarlanmıştır; 13 yaş altındaki çocuklara yönelik değildir ve bilerek çocuklardan kişisel veri toplamaz.</p>
 
-    <h2>Değişiklikler</h2>
-    <p>Bu politika değişirse güncel metin bu sayfada yürürlük tarihiyle birlikte yayımlanır. Veri işleme şeklini değiştiren bir güncelleme olursa uygulama içinde de bildirilir.</p>
+    <h2>7. Değişiklikler</h2>
+    <p>Bu politika değişirse güncel metin bu sayfada yürürlük tarihiyle birlikte yayımlanır. Veri işleme şeklini değiştiren bir güncelleme olursa uygulama içinde de bildirilir. Sürüm 1.1.0 ile reklamlar (Google AdMob) eklenmiştir.</p>
 
-    <h2>İletişim</h2>
+    <h2>8. İletişim</h2>
     <p>Silvia Studios · <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
   </section>
 
   <section class="policy" id="en" lang="en">
     <h2>Privacy Policy</h2>
-    <p class="sub">Effective date: 16 November 2026 · Version 1.0.0</p>
+    <p class="sub">Effective date: 16 November 2026 · App version 1.1.0</p>
 
-    <div class="box"><strong>Summary:</strong> Düzen performs all analysis on your device. No personal data, files, file names or analysis results are collected or sent to the developer or any third party. The app does not request internet access and contains no accounts, ads or analytics tools.</div>
+    <div class="box"><strong>Summary:</strong> Düzen performs all file analysis on your device; your files, file names and analysis results are never sent to the developer or any third party. The app is free and shows <strong>Google AdMob</strong> ads. For ads, the app connects to the internet and Google processes data such as the advertising ID, device information and IP address. The app has no account system and no developer-operated server.</div>
 
-    <h2>Information the app processes</h2>
+    <h2>1. Information processed on your device (not shared)</h2>
     <p>For the photos, videos and audio files in Android's media library (MediaStore), Düzen reads the following <strong>on your device only</strong>: file name, size, creation/modification date, type and folder. This is used to list large files, screenshots, WhatsApp/Telegram media and old downloads.</p>
-    <p>To find exact duplicates, only files of identical size are read on the device and turned into a SHA-256 fingerprint. Fingerprints and scan results are kept in memory only while the app is open; they are not written to storage and never leave the device.</p>
+    <p>To find exact duplicates, only files of identical size are read on the device and turned into a SHA-256 fingerprint. Fingerprints and scan results are kept in memory only while the app is open; they are not written to storage and never leave the device. This file information is never used for advertising and is never passed to the ads SDK.</p>
     <p>The app also shows the total and free space of internal storage (Android StatFs).</p>
-    <p>The following preferences are stored on your device in the app's private storage: language, accent color, reminder day/time, last analysis time, and the system references (MediaStore URIs) of the files from the most recent move to trash so it can be undone. They are removed when you uninstall the app or clear its data in Android settings.</p>
+    <p>The following preferences are stored on your device in the app's private storage: language, accent color, vibration preference, reminder day/time, launch count (to limit how often ads appear), last analysis time and summary (total size and number of duplicate groups — so the weekly reminder only appears when useful), and the system references (MediaStore URIs) of the files from the most recent move to trash so it can be undone. They never leave the device and are removed when you uninstall the app or clear its data in Android settings.</p>
 
-    <h2>Permissions</h2>
-    <table>
+    <h2>2. Advertising (Google AdMob)</h2>
+    <p>To offer Düzen for free we use the <strong>Google Mobile Ads SDK</strong> (AdMob) from Google LLC. Ads appear as a banner at the bottom of list screens and occasionally as a full-screen ad after an action has finished. To serve ads, limit their frequency, measure them and prevent abuse, Google may collect and process:</p>
+    <ul>
+      <li>Device identifiers such as the <strong>advertising ID</strong> (Android Advertising ID) and app set ID,</li>
+      <li><strong>Device information</strong> (model, OS version, language, screen size, network type),</li>
+      <li>Your <strong>IP address</strong> (from which an approximate location can be derived),</li>
+      <li>Ad interactions (impressions, clicks) and SDK diagnostics/performance data.</li>
+    </ul>
+    <p>This data is processed by Google under Google's own policies; the developer does not access it individually. Details: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+    <p><strong>Consent (UMP):</strong> In regions where it is required, such as the European Economic Area, the United Kingdom and Switzerland, the app asks for your consent to personalized ads on first launch using Google's User Messaging Platform (UMP). You can change your choice at any time under <em>Settings &gt; Ads and privacy &gt; Ad privacy choices</em>. Without consent, only limited/non-personalized ads may be shown.</p>
+    <p><strong>Controlling the advertising ID:</strong> You can reset or delete your advertising ID in Android settings (Google &gt; Ads, or Privacy &gt; Ads).</p>
+    <p>Ad content is limited to a maximum rating of "PG" (parental guidance).</p>
+
+    <h2>3. Permissions</h2>
+    <div class="table-wrap"><table>
       <tr><th>Permission</th><th>Purpose</th></tr>
       <tr><td><code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Analyze the size and dates of your photos, videos and audio files; compare duplicates on the device; show preview thumbnails.</td></tr>
       <tr><td><code>READ_EXTERNAL_STORAGE</code> (Android 12L and earlier only)</td><td>Same purpose; the only way to read media on older Android versions.</td></tr>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Only to load ads (Google AdMob) and the ad consent form. Your files and analysis results are never sent over the internet.</td></tr>
+      <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Lets Google AdMob read the advertising ID to serve and measure ads.</td></tr>
       <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show a weekly storage-check reminder, only if you turn it on.</td></tr>
       <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Restore the weekly reminder you enabled after the phone restarts.</td></tr>
-    </table>
-    <p>Düzen does not request all-files access (<code>MANAGE_EXTERNAL_STORAGE</code>), package listing (<code>QUERY_ALL_PACKAGES</code>), location, contacts, camera, microphone or internet permissions. You can revoke permissions at any time in Android settings.</p>
+      <tr><td><code>VIBRATE</code></td><td>Short haptic feedback when selecting and moving files (can be turned off in Settings).</td></tr>
+    </table></div>
+    <p>Düzen does not request all-files access (<code>MANAGE_EXTERNAL_STORAGE</code>), package listing (<code>QUERY_ALL_PACKAGES</code>), location, contacts, camera or microphone permissions. You can revoke permissions at any time in Android settings.</p>
 
-    <h2>Deleting files</h2>
+    <h2>4. Deleting files</h2>
     <p>Düzen never deletes files on its own. Files you select are moved to the system trash only after you allow it in Android's own confirmation dialog (Android 11+). Android permanently deletes trashed files after about 30 days; until then they can be restored with the in-app "Undo" button or with file/gallery apps that show the trash. On Android 10 and earlier the app only opens the file in a system app, where you delete it yourself.</p>
 
-    <h2>Sharing, advertising and analytics</h2>
-    <p>Düzen does not transfer, sell or share any data with the developer or third parties. The app contains no advertising SDK, analytics or crash-reporting tool, account system or server. Accordingly, the Google Play Data safety section declares that no data is collected or shared.</p>
+    <h2>5. Sharing and sale</h2>
+    <p>The developer does not sell any personal data. Your files, file names and analysis results are not shared with anyone. The device identifiers and device/network information needed for ads are shared only with the ad provider Google, as described above. The app contains no separate analytics or crash-reporting tool, account system or developer-operated server.</p>
 
-    <h2>Children</h2>
-    <p>Düzen is not directed at children and does not collect personal data from any age group.</p>
+    <h2>6. Children</h2>
+    <p>Düzen is designed for a general audience aged 13 and over; it is not directed at children under 13 and does not knowingly collect personal data from children.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy changes, the updated text will be published on this page with its effective date. Any update that changes how data is processed will also be announced in the app.</p>
+    <h2>7. Changes</h2>
+    <p>If this policy changes, the updated text will be published on this page with its effective date. Any update that changes how data is processed will also be announced in the app. Version 1.1.0 added advertising (Google AdMob).</p>
 
-    <h2>Contact</h2>
+    <h2>8. Contact</h2>
     <p>Silvia Studios · <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
   </section>
 
