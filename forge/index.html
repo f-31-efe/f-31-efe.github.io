@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORGE — Gizlilik Politikası</title>
+<meta name="description" content="FORGE privacy policy and terms of use / FORGE gizlilik politikası ve kullanım koşulları">
+<style>
+:root{--bg:#0b0c0b;--surface:#141615;--line:#2b2e2a;--text:#f2f1ec;--muted:#8a8e86;--sage:#b8c9b0;--sand:#d9c08a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:40px 16px 80px}
+main{max-width:720px;margin:0 auto}
+h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 32px}
+h2{font-size:1.15rem;margin:36px 0 10px;color:var(--sage)}
+p,li{color:#dcdbd5}
+a{color:var(--sage)}
+.lead{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 8px}
+.lead strong{color:var(--sand)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line);font-size:.93rem}
+th{color:var(--muted);font-weight:600}
+code{background:var(--surface);padding:2px 6px;border-radius:5px;font-size:.88em;word-break:break-all}
+nav{display:flex;gap:8px;justify-content:flex-end;margin:0 0 24px}
+nav button{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+nav button[aria-pressed="true"]{border-color:var(--sage);color:var(--sage)}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Dil / Language">
+<button type="button" data-l="tr" aria-pressed="true">Türkçe</button>
+<button type="button" data-l="en" aria-pressed="false">English</button>
+</nav>
+<section id="tr" lang="tr">
+<h1>FORGE — Gizlilik Politikası</h1>
+<p class="sub">Son güncelleme: 16 Kasım 2026 · Silvia Studios · <code>com.silviastudios.forge</code></p>
+<div class="lead"><strong>Kısaca:</strong> FORGE'un sunucusu, hesabı, reklamı ve analitiği yoktur.
+Girdiğiniz antrenman ve profil bilgileri yalnızca telefonunuzda saklanır. İnternete yalnızca
+aşağıda sayılan durumlarda — çoğu sizin isteğinizle — çıkılır.</div>
+
+<h2>1. Cihazınızda saklanan veriler</h2>
+<p>Aşağıdaki bilgiler yalnızca uygulamanın cihazdaki özel depolama alanında tutulur, geliştiriciye
+gönderilmez ve uygulamayı kaldırdığınızda silinir:</p>
+<ul>
+<li>Ad (isteğe bağlı), yaş, cinsiyet, boy, kilo</li>
+<li>Antrenman hedefi, deneyim seviyesi, erişebildiğiniz ekipman</li>
+<li>Sakatlık / kısıt notları</li>
+<li>Antrenman geçmişi: setler, ağırlıklar, tekrarlar, RPE, set notları</li>
+<li>Kişisel rekorlar, haftalık program, şablonlar, eklediğiniz özel hareketler</li>
+<li>Vücut ölçüleri ve kilo kayıtları</li>
+<li>Uygulama tercihleri (tema, dil, birim, ses/titreşim) ve — girerseniz — koç API anahtarınız</li>
+</ul>
+<p>Android'in otomatik bulut yedeği bu uygulama için kapalıdır; verileriniz Google Drive'a da kopyalanmaz.</p>
+
+<h2>2. İnternet bağlantısı ne zaman kullanılır</h2>
+<div class="tablewrap"><table>
+<tr><th>Durum</th><th>Nereye</th><th>Ne gider</th></tr>
+<tr><td>Hareket fotoğrafı görüntüleme</td><td><code>raw.githubusercontent.com</code> (GitHub)</td>
+<td>Yalnızca fotoğraf dosyasının isteği. Kişisel veri gönderilmez; her web isteğinde olduğu gibi
+GitHub IP adresinizi görür. Fotoğraflar indirildikten sonra cihazda önbelleğe alınır.</td></tr>
+<tr><td>FORGE Plus satın alma / geri yükleme</td><td>Google Play Faturalandırma</td>
+<td>Satın alma Google Play üzerinden yapılır. Ödeme bilgileriniz FORGE'a hiçbir zaman ulaşmaz;
+uygulama yalnızca Play'den satın alma durumunu (etkin/değil) öğrenir.</td></tr>
+<tr><td>Koç sohbeti — <em>yalnızca kendi API anahtarınızı girerseniz</em></td>
+<td>Seçtiğiniz sağlayıcı: Google Gemini (<code>generativelanguage.googleapis.com</code>) veya xAI (<code>api.x.ai</code>)</td>
+<td>Yazdığınız soru, son 8 sohbet mesajı ve cevabı kişiselleştirmek için bir özet: adınız (varsa), yaş,
+boy, kilo, hedef, seviye, haftalık gün/süre, ekipman, sakatlık notu, son 7 günün kas grubu set sayıları
+ve hareket kataloğu adları. İstek doğrudan cihazınızdan sağlayıcıya gider; FORGE'un arada bir sunucusu
+yoktur. Bu veriler o sağlayıcının kendi gizlilik koşullarına tabidir. Özellik varsayılan olarak kapalıdır,
+anahtar yalnızca cihazınızda saklanır ve Ayarlar'dan tek dokunuşla silinir.</td></tr>
+<tr><td>"Videoda izle" düğmesi</td><td>YouTube (tarayıcıda açılır)</td>
+<td>Yalnızca hareketin İngilizce adıyla bir arama sayfası açılır; uygulama veri göndermez.</td></tr>
+<tr><td>Gizlilik politikası / kullanım koşulları bağlantısı</td><td><code>f-31-efe.github.io</code> (tarayıcıda)</td>
+<td>Bu sayfa. Uygulama veri göndermez.</td></tr>
+</table></div>
+<p>Bunların dışında ağ isteği yapılmaz. Fotoğraflar dışındaki tüm temel özellikler uçak modunda çalışır.</p>
+
+<h2>3. Analitik, reklam, takip</h2>
+<p>FORGE reklam göstermez; reklam kimliği (Advertising ID), analitik, çökme raporlama veya
+izleme aracı içermez. Kullanım davranışınız kaydedilmez ve kimseyle paylaşılmaz. Veri satılmaz.</p>
+
+<h2>4. İzinler</h2>
+<div class="tablewrap"><table>
+<tr><th>İzin</th><th>Neden</th></tr>
+<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Fotoğraf indirme, Play faturalandırma, isteğe bağlı koç bağlantısı</td></tr>
+<tr><td>POST_NOTIFICATIONS</td><td>Uygulama arka plandayken dinlenme sayacı bitince bildirim (Android 13+'ta izin sorulur; reddedebilirsiniz)</td></tr>
+<tr><td>WAKE_LOCK</td><td>Seans sırasında ekranın açık kalması ve sayaç bitişinin zamanında bildirilmesi</td></tr>
+<tr><td>VIBRATE</td><td>Set onayı ve sayaç sonu titreşimi</td></tr>
+<tr><td>BILLING</td><td>FORGE Plus satın alımı</td></tr>
+</table></div>
+<p>Kamera, mikrofon, konum, rehber veya dosya erişimi istenmez.</p>
+
+<h2>5. Verilerinizin kontrolü</h2>
+<ul>
+<li><strong>Dışa aktarma:</strong> Gelişim → Veri ve yedekleme → Tam yedek (JSON) veya antrenman geçmişi (CSV, Plus).</li>
+<li><strong>Taşıma:</strong> Yedeği başka bir cihazda "Yedekten geri yükle" ile içe aktarabilirsiniz.</li>
+<li><strong>Silme:</strong> Gelişim → Veri ve yedekleme → Tüm verileri sil. Uygulamayı kaldırmak da tüm verileri siler.
+Koç anahtarını Ayarlar → Koç bağlantısı → Anahtarı sil ile kaldırabilirsiniz.</li>
+</ul>
+<p>Verileriniz bizde tutulmadığı için bizden silme talep etmenize gerek yoktur. Koç sağlayıcısına
+gönderilmiş içerik için ilgili sağlayıcının (Google / xAI) silme süreçleri geçerlidir.</p>
+
+<h2>6. Sağlık bilgisi notu</h2>
+<p>FORGE tıbbi bir cihaz değildir ve teşhis koymaz. Kilo, ölçü ve sakatlık notları yalnızca programınızı
+uyarlamak için cihazda kullanılır.</p>
+
+<h2>7. Çocuklar</h2>
+<p>FORGE 13 yaş altındaki çocuklara yönelik değildir ve çocuklardan bilerek veri toplamaz.</p>
+
+<h2>8. Değişiklikler</h2>
+<p>Bu politika değişirse güncel sürüm bu adreste yayımlanır ve üstteki tarih güncellenir.</p>
+
+<h2 id="kosullar">9. Kullanım koşulları</h2>
+<ul>
+<li>FORGE genel bilgilendirme amaçlı bir antrenman günlüğüdür; tıbbi veya profesyonel antrenör tavsiyesi
+yerine geçmez. Yeni bir programa başlamadan önce, özellikle bir sağlık sorununuz varsa, hekiminize danışın.
+Egzersizi kendi sorumluluğunuzda yaparsınız; ağrı hissederseniz durun.</li>
+<li>Program önerileri, yük önerileri ve koç cevapları otomatik üretilir ve hatalı olabilir.</li>
+<li>FORGE Plus abonelikleri Google Play üzerinden satılır, faturalanır, yenilenir ve iptal edilir; iade ve iptal
+koşulları Google Play politikalarına tabidir. Ömür boyu seçeneği tek seferlik bir satın almadır.</li>
+<li>Uygulama "olduğu gibi" sunulur. Verileriniz cihazınızda tutulduğu için yedek almak sizin sorumluluğunuzdadır.</li>
+<li>Hareket fotoğrafları Everkinetic'e aittir ve CC BY-SA 3.0 lisansıyla kullanılır
+(derleme: <a href="https://github.com/yuhonas/free-exercise-db">yuhonas/free-exercise-db</a>).</li>
+<li>Koç sohbetinde kullandığınız sağlayıcının (Google / xAI) kullanım koşulları ayrıca geçerlidir.</li>
+</ul>
+
+<h2>10. İletişim</h2>
+<p>Sorularınız için: <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+<section id="en" lang="en" hidden>
+<h1>FORGE — Privacy Policy</h1>
+<p class="sub">Last updated: 16 November 2026 · Silvia Studios · <code>com.silviastudios.forge</code></p>
+<div class="lead"><strong>In short:</strong> FORGE has no server, no account, no ads and no analytics.
+The workout and profile information you enter is stored only on your phone. The app goes online only
+in the cases listed below — most of them at your request.</div>
+
+<h2>1. Data stored on your device</h2>
+<p>The following is kept only in the app's private storage on your device. It is never sent to the
+developer and is deleted when you uninstall the app:</p>
+<ul>
+<li>Name (optional), age, gender, height, weight</li>
+<li>Training goal, experience level, available equipment</li>
+<li>Injury / limitation notes</li>
+<li>Workout history: sets, weights, reps, RPE, set notes</li>
+<li>Personal records, weekly program, templates, custom exercises you add</li>
+<li>Body measurements and weight entries</li>
+<li>App preferences (theme, language, unit, sound/vibration) and — if you enter one — your coach API key</li>
+</ul>
+<p>Android's automatic cloud backup is disabled for this app, so your data is not copied to Google Drive either.</p>
+
+<h2>2. When the internet is used</h2>
+<div class="tablewrap"><table>
+<tr><th>Case</th><th>Where</th><th>What is sent</th></tr>
+<tr><td>Viewing exercise photos</td><td><code>raw.githubusercontent.com</code> (GitHub)</td>
+<td>Only the request for the image file. No personal data is sent; as with any web request, GitHub
+sees your IP address. Photos are cached on the device after download.</td></tr>
+<tr><td>Buying / restoring FORGE Plus</td><td>Google Play Billing</td>
+<td>Purchases are made through Google Play. Your payment details never reach FORGE; the app only learns
+the purchase status (active or not) from Play.</td></tr>
+<tr><td>Coach chat — <em>only if you enter your own API key</em></td>
+<td>The provider you choose: Google Gemini (<code>generativelanguage.googleapis.com</code>) or xAI (<code>api.x.ai</code>)</td>
+<td>Your question, the last 8 chat messages and a summary used to personalise the answer: your name
+(if set), age, height, weight, goal, level, days/minutes per week, equipment, injury note, sets per muscle
+group over the last 7 days and the names in the exercise catalog. The request goes directly from your
+device to the provider; FORGE has no server in between. This data is subject to that provider's own privacy
+terms. The feature is off by default, the key is stored only on your device and can be deleted in Settings
+with one tap.</td></tr>
+<tr><td>"Watch a video" button</td><td>YouTube (opens in your browser)</td>
+<td>Only opens a search page for the exercise's English name; the app sends no data.</td></tr>
+<tr><td>Privacy policy / terms links</td><td><code>f-31-efe.github.io</code> (in your browser)</td>
+<td>This page. The app sends no data.</td></tr>
+</table></div>
+<p>No other network requests are made. Apart from photos, every core feature works in airplane mode.</p>
+
+<h2>3. Analytics, ads, tracking</h2>
+<p>FORGE shows no ads and contains no advertising ID, analytics, crash reporting or tracking tools.
+Your usage is not recorded or shared with anyone. No data is sold.</p>
+
+<h2>4. Permissions</h2>
+<div class="tablewrap"><table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td>INTERNET, ACCESS_NETWORK_STATE</td><td>Photo downloads, Play Billing, optional coach connection</td></tr>
+<tr><td>POST_NOTIFICATIONS</td><td>A notification when the rest timer ends while the app is in the background (asked on Android 13+; you can decline)</td></tr>
+<tr><td>WAKE_LOCK</td><td>Keeping the screen on during a session and delivering the timer alert on time</td></tr>
+<tr><td>VIBRATE</td><td>Vibration on set completion and when the timer ends</td></tr>
+<tr><td>BILLING</td><td>Buying FORGE Plus</td></tr>
+</table></div>
+<p>No camera, microphone, location, contacts or file access is requested.</p>
+
+<h2>5. Your control over your data</h2>
+<ul>
+<li><strong>Export:</strong> Progress → Data and backup → Full backup (JSON) or workout history (CSV, Plus).</li>
+<li><strong>Move:</strong> Import the backup on another device with "Restore from backup".</li>
+<li><strong>Delete:</strong> Progress → Data and backup → Delete all data. Uninstalling the app also deletes everything.
+Remove the coach key in Settings → Coach connection → Delete key.</li>
+</ul>
+<p>Because we don't hold your data, there is nothing to request from us. For content sent to a coach
+provider, that provider's (Google / xAI) deletion processes apply.</p>
+
+<h2>6. A note on health information</h2>
+<p>FORGE is not a medical device and does not diagnose. Weight, measurements and injury notes are only
+used on the device to adapt your program.</p>
+
+<h2>7. Children</h2>
+<p>FORGE is not directed at children under 13 and does not knowingly collect data from children.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes, the current version is published at this address and the date above is updated.</p>
+
+<h2 id="terms">9. Terms of use</h2>
+<ul>
+<li>FORGE is a training log for general information; it is not a substitute for medical or professional
+coaching advice. Consult a doctor before starting a new program, especially if you have a health condition.
+You exercise at your own risk; stop if you feel pain.</li>
+<li>Program suggestions, load suggestions and coach answers are generated automatically and may be wrong.</li>
+<li>FORGE Plus subscriptions are sold, billed, renewed and cancelled through Google Play; refunds and
+cancellations follow Google Play policies. The lifetime option is a one-time purchase.</li>
+<li>The app is provided "as is". Because your data lives on your device, keeping backups is your responsibility.</li>
+<li>Exercise photos belong to Everkinetic and are used under CC BY-SA 3.0
+(compiled by <a href="https://github.com/yuhonas/free-exercise-db">yuhonas/free-exercise-db</a>).</li>
+<li>The terms of the coach provider you use (Google / xAI) also apply.</li>
+</ul>
+
+<h2>10. Contact</h2>
+<p>Questions: <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+<footer>FORGE · Silvia Studios</footer>
+</main>
+<script>
+(function(){
+  var tr=document.getElementById('tr'), en=document.getElementById('en');
+  function show(l){
+    tr.hidden = l!=='tr'; en.hidden = l!=='en';
+    document.documentElement.lang = l;
+    document.title = l==='en' ? 'FORGE — Privacy Policy' : 'FORGE — Gizlilik Politikası';
+    document.querySelectorAll('nav button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.l===l?'true':'false');});
+  }
+  function fromHash(){
+    var h=(location.hash||'').toLowerCase();
+    if(h==='#en'||h==='#terms') return 'en';
+    if(h==='#tr'||h==='#kosullar') return 'tr';
+    var n=(navigator.language||'tr').toLowerCase();
+    return n.indexOf('tr')===0 ? 'tr' : 'en';
+  }
+  document.querySelectorAll('nav button').forEach(function(b){
+    b.addEventListener('click',function(){show(b.dataset.l); history.replaceState(null,'','#'+b.dataset.l);});
+  });
+  show(fromHash());
+  var h=(location.hash||'').toLowerCase();
+  if(h==='#terms'||h==='#kosullar'){var t=document.getElementById(h.slice(1)); if(t) t.scrollIntoView();}
+  window.addEventListener('hashchange',function(){show(fromHash());});
+})();
+</script>
+</body>
+</html>
