@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silvia Erasmus — Gizlilik Politikası</title>
+<meta name="description" content="Silvia Erasmus privacy policy / Silvia Erasmus gizlilik politikası">
+<style>
+:root{--bg:#080c1e;--surface:#121935;--line:#27305a;--text:#eef1ff;--muted:#9aa5cc;--accent:#7ea2ff;--gold:#ffcc4d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:40px 16px 80px}
+main{max-width:720px;margin:0 auto}
+h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 32px}
+h2{font-size:1.15rem;margin:36px 0 10px;color:var(--accent)}
+p,li{color:#dde2f7}
+a{color:var(--accent)}
+.lead{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 8px}
+.lead strong{color:var(--gold)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line);font-size:.93rem}
+th{color:var(--muted);font-weight:600}
+code{background:var(--surface);padding:2px 6px;border-radius:5px;font-size:.88em;word-break:break-all}
+nav{display:flex;gap:8px;justify-content:flex-end;margin:0 0 24px}
+nav button{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+nav button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Dil / Language">
+<button type="button" data-l="tr" aria-pressed="true">Türkçe</button>
+<button type="button" data-l="en" aria-pressed="false">English</button>
+</nav>
+
+<section id="tr" lang="tr">
+<h1>Silvia Erasmus — Gizlilik Politikası</h1>
+<p class="sub">Son güncelleme: 17 Kasım 2026 · Silvia Studios · <code>com.silviastudios.erasmus</code></p>
+<div class="lead"><strong>Kısaca:</strong> Silvia Erasmus, öğretmenlerin Erasmus+ ortak kurum bulmasına yardım eder:
+seçtiğiniz ölçütlere uyan okul ve kurumların herkese açık iletişim adreslerini bulur ve sizin yazdığınız
+mektubu <em>sizin Gmail hesabınızdan</em> gönderir. Gmail uygulama şifreniz yalnızca cihazınızda saklanır.
+Aynı okula iki kez yazılmaması için gönderilen adresler ortak bir deftere (Google Firebase) işlenir.
+Reklam ve analitik yoktur.</div>
+
+<h2>1. Cihazınızda saklanan veriler</h2>
+<ul>
+<li>Görünen adınız (uygulamada kendinize verdiğiniz ad)</li>
+<li>Bot ayarları: hedef kurum türleri, ülkeler, Erasmus+ proje türü, günlük gönderim sınırı</li>
+<li>Gmail adresiniz ve Gmail <strong>uygulama şifreniz</strong> (yalnızca cihazda; geliştiriciye gönderilmez)</li>
+<li>Mektup konusu, metni ve eklediğiniz dosyalar</li>
+<li>Gönderim kayıtları (hangi kuruma ne zaman yazıldığı) ve gelen yanıt sayıları</li>
+</ul>
+<p>Bu veriler uygulamayı kaldırdığınızda silinir.</p>
+
+<h2>2. Gmail hesabınızın kullanımı</h2>
+<p>Mektuplar, girdiğiniz uygulama şifresiyle doğrudan cihazınızdan Google'ın posta sunucusuna
+(<code>smtp.gmail.com</code>) bağlanılarak gönderilir. Yanıt ve geri dönen mailleri fark etmek için
+<code>imap.gmail.com</code> üzerinden gelen kutunuzdaki yalnızca son iletilerin <em>gönderen ve konu</em>
+başlıkları salt okunur biçimde okunur; ileti gövdeleri okunmaz, hiçbir ileti silinmez ya da değiştirilmez,
+bu bilgiler cihaz dışına çıkmaz. Bot, yalnızca sizin oluşturup onayladığınız ölçütlerle ve sizin yazdığınız
+metinle gönderim yapar; botu istediğiniz an durdurabilir veya silebilirsiniz.</p>
+
+<h2>3. Ortak deftere (Google Firebase) gönderilen veriler</h2>
+<p>Birden çok öğretmen aynı okula yazmasın diye uygulama Google Firebase (Cloud Firestore) üzerinde ortak bir
+kayıt tutar. Giriş anonimdir (e-posta veya şifre istenmez).</p>
+<div class="tablewrap"><table>
+<tr><th>Veri</th><th>Amaç</th></tr>
+<tr><td>Anonim kullanıcı kimliği, görünen ad, uygulama sürümü, platform, son görülme zamanı</td><td>Oturumun çalışması, kötüye kullanımın önlenmesi</td></tr>
+<tr><td>Bot özeti: bot adı, durumu, gönderim/hata/yanıt sayıları, hedef türler ve ülkeler</td><td>Gönderim düzeninin izlenmesi, gerekirse gönderimin durdurulması</td></tr>
+<tr><td>Yazılan kurumun herkese açık e-posta adresi, kurum adı, ülkesi, gönderim zamanı, görünen adınız ve bot adı</td><td>Aynı kuruma ikinci kez yazılmasını engellemek</td></tr>
+</table></div>
+<p>Gmail adresiniz, uygulama şifreniz ve mektup metniniz Firebase'e <strong>gönderilmez</strong>.
+Bu kayıtları yalnızca Silvia Erasmus yöneticileri görebilir; üçüncü taraflarla paylaşılmaz ve satılmaz.</p>
+
+<h2>4. Kurum bulmak için yapılan istekler</h2>
+<p>Uygulama okul ve kurumların herkese açık web sitelerini, Wikidata, OpenStreetMap ve arama motoru
+sonuç sayfalarını okur. Bu isteklerde kişisel veriniz gönderilmez; her web isteğinde olduğu gibi ilgili
+site IP adresinizi görebilir. Uygulama içindeki kurum kataloğu, Avrupa Komisyonu'nun herkese açık Erasmus+
+proje listelerinden ve Wikidata'dan derlenmiştir.</p>
+
+<h2>5. Web sürümü</h2>
+<p>Tarayıcıdan kullanılan web sürümünde tarayıcılar posta sunucusuna doğrudan bağlanamadığı için
+gönderim, okuma ve site isteklerini Silvia Studios'un Cloudflare üzerindeki aktarım sunucusu
+(<code>silvia-bridge</code>) iletir. Uygulama şifreniz bu aktarım sırasında şifreli (TLS) bağlantıyla
+geçer; aktarım sunucusu hiçbir veriyi saklamaz veya kaydetmez.</p>
+
+<h2>6. Bildirimler ve izinler</h2>
+<ul>
+<li><strong>İnternet</strong> — kurum bulmak ve mail göndermek için</li>
+<li><strong>Bildirimler</strong> — botun durumunu ve günlük raporu göstermek için</li>
+<li><strong>Ekranı açık tutma (wake lock)</strong> — bot çalışırken gönderimin kesilmemesi için</li>
+</ul>
+
+<h2>7. Verilerin silinmesi</h2>
+<p>Cihazdaki tüm veriler uygulama kaldırılınca silinir. Ortak defterdeki oturum ve bot kayıtlarınızın
+silinmesini istemek için <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a> adresine
+uygulamada kullandığınız görünen adla yazın; talep 30 gün içinde yerine getirilir. Gönderilen kurum
+adresleri, aynı kuruma yeniden yazılmasını önleme amacıyla anonimleştirilerek tutulabilir.</p>
+
+<h2>8. Çocuklar</h2>
+<p>Uygulama öğretmen ve eğitim kurumu çalışanları içindir; 13 yaşından küçük çocuklara yönelik değildir.</p>
+
+<h2>9. Değişiklikler</h2>
+<p>Bu politika değişirse bu sayfa güncellenir ve üstteki tarih değişir.</p>
+
+<h2>10. İletişim</h2>
+<p>Sorular: <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+
+<section id="en" lang="en" hidden>
+<h1>Silvia Erasmus — Privacy Policy</h1>
+<p class="sub">Last updated: 17 November 2026 · Silvia Studios · <code>com.silviastudios.erasmus</code></p>
+<div class="lead"><strong>In short:</strong> Silvia Erasmus helps teachers find Erasmus+ partner institutions:
+it finds the public contact addresses of schools and organisations that match the criteria you choose and
+sends the letter you wrote <em>from your own Gmail account</em>. Your Gmail app password is stored only on your
+device. Contacted addresses are recorded in a shared ledger (Google Firebase) so the same school is not
+contacted twice. There are no ads and no analytics.</div>
+
+<h2>1. Data stored on your device</h2>
+<ul>
+<li>Your display name (the name you give yourself in the app)</li>
+<li>Bot settings: target institution types, countries, Erasmus+ action type, daily sending limit</li>
+<li>Your Gmail address and Gmail <strong>app password</strong> (device only; never sent to the developer)</li>
+<li>Letter subject, text and attachments</li>
+<li>Sending records (which institution was contacted and when) and reply counts</li>
+</ul>
+<p>This data is deleted when you uninstall the app.</p>
+
+<h2>2. Use of your Gmail account</h2>
+<p>Letters are sent directly from your device to Google's mail server (<code>smtp.gmail.com</code>) using the app
+password you entered. To detect replies and bounced mail, the app reads, read-only, only the <em>sender and
+subject</em> headers of recent messages via <code>imap.gmail.com</code>; message bodies are not read, no message is
+deleted or changed, and this information never leaves your device. The bot only sends with criteria you
+created and confirmed and with text you wrote; you can stop or delete it at any time.</p>
+
+<h2>3. Data sent to the shared ledger (Google Firebase)</h2>
+<p>To keep several teachers from writing to the same school, the app keeps a shared record on Google Firebase
+(Cloud Firestore). Sign-in is anonymous (no email or password is requested).</p>
+<div class="tablewrap"><table>
+<tr><th>Data</th><th>Purpose</th></tr>
+<tr><td>Anonymous user ID, display name, app version, platform, last-seen time</td><td>Running the session, preventing abuse</td></tr>
+<tr><td>Bot summary: bot name, status, sent/failed/reply counts, target types and countries</td><td>Monitoring sending behaviour and pausing it if needed</td></tr>
+<tr><td>The contacted institution's public email address, name, country, time of sending, your display name and bot name</td><td>Preventing the same institution from being contacted twice</td></tr>
+</table></div>
+<p>Your Gmail address, app password and letter text are <strong>not</strong> sent to Firebase. These records are
+visible only to Silvia Erasmus administrators; they are not shared with or sold to third parties.</p>
+
+<h2>4. Requests made to find institutions</h2>
+<p>The app reads public websites of schools and organisations, Wikidata, OpenStreetMap and search-engine result
+pages. No personal data is sent in these requests; as with any web request, the site may see your IP address.
+The built-in catalogue is compiled from the European Commission's public Erasmus+ project lists and Wikidata.</p>
+
+<h2>5. Web version</h2>
+<p>In the browser version, because browsers cannot connect to mail servers directly, sending, reading and page
+requests are relayed by Silvia Studios' relay on Cloudflare (<code>silvia-bridge</code>). Your app password passes
+through this relay over an encrypted (TLS) connection; the relay does not store or log any data.</p>
+
+<h2>6. Notifications and permissions</h2>
+<ul>
+<li><strong>Internet</strong> — to find institutions and send mail</li>
+<li><strong>Notifications</strong> — to show bot status and the daily report</li>
+<li><strong>Wake lock</strong> — so sending is not interrupted while a bot runs</li>
+</ul>
+
+<h2>7. Data deletion</h2>
+<p>All on-device data is deleted when the app is uninstalled. To request deletion of your session and bot
+records in the shared ledger, write to <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a> with the
+display name you used in the app; requests are fulfilled within 30 days. Contacted institution addresses may be
+kept in anonymised form to prevent the institution from being contacted again.</p>
+
+<h2>8. Children</h2>
+<p>The app is intended for teachers and education staff; it is not directed at children under 13.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, this page is updated and the date above changes.</p>
+
+<h2>10. Contact</h2>
+<p>Questions: <a href="mailto:silviagamestr@gmail.com">silviagamestr@gmail.com</a></p>
+</section>
+<footer>Silvia Erasmus · Silvia Studios</footer>
+</main>
+<script>
+(function(){
+  var tr=document.getElementById('tr'), en=document.getElementById('en');
+  function show(l){
+    tr.hidden = l!=='tr'; en.hidden = l!=='en';
+    document.documentElement.lang = l;
+    document.title = l==='en' ? 'Silvia Erasmus — Privacy Policy' : 'Silvia Erasmus — Gizlilik Politikası';
+    document.querySelectorAll('nav button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.l===l?'true':'false');});
+  }
+  function fromHash(){
+    var h=(location.hash||'').toLowerCase();
+    if(h==='#en') return 'en';
+    if(h==='#tr') return 'tr';
+    var n=(navigator.language||'tr').toLowerCase();
+    return n.indexOf('tr')===0 ? 'tr' : 'en';
+  }
+  document.querySelectorAll('nav button').forEach(function(b){
+    b.addEventListener('click',function(){show(b.dataset.l); history.replaceState(null,'','#'+b.dataset.l);});
+  });
+  show(fromHash());
+  window.addEventListener('hashchange',function(){show(fromHash());});
+})();
+</script>
+</body>
+</html>
