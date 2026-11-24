@@ -51,7 +51,7 @@
 
   <section class="policy" id="tr" lang="tr">
     <h2>Gizlilik Politikası</h2>
-    <p class="sub">Yürürlük tarihi: 16 Kasım 2026 · Uygulama sürümü 1.1.0</p>
+    <p class="sub">Yürürlük tarihi: 24 Kasım 2026 · Uygulama sürümü 1.1.3</p>
 
     <div class="box"><strong>Özet:</strong> Düzen dosya analizini tamamen cihazınızda yapar; dosyalarınız, dosya adları ve analiz sonuçları geliştiriciye veya üçüncü taraflara gönderilmez. Uygulama ücretsizdir ve <strong>Google AdMob</strong> reklamları gösterir. Reklamlar için uygulama internete bağlanır ve Google; reklam kimliği, cihaz bilgileri ve IP adresi gibi verileri işler. Uygulamada hesap sistemi ve geliştiriciye ait sunucu yoktur.</div>
 
@@ -59,10 +59,10 @@
     <p>Düzen, Android'in medya kütüphanesindeki (MediaStore) fotoğraf, video ve ses dosyalarınız için şu bilgileri <strong>yalnızca cihazınızda</strong> okur: dosya adı, boyutu, oluşturulma/değiştirilme tarihi, türü ve bulunduğu klasör. Bu bilgilerle büyük dosyalar, ekran görüntüleri, WhatsApp/Telegram medyası ve eski indirmeler listelenir.</p>
     <p>Birebir kopyaları bulmak için yalnızca aynı boyuttaki dosyaların içeriği cihazda okunur ve SHA-256 parmak izine dönüştürülür. Parmak izleri ve tarama sonuçları yalnızca uygulama açıkken bellekte tutulur; diske kaydedilmez ve cihazdan çıkmaz. Bu dosya bilgileri reklam amacıyla kullanılmaz ve reklam SDK'sına verilmez.</p>
     <p>Uygulama ayrıca dahili depolamanın toplam ve boş alanını (Android StatFs) gösterir.</p>
-    <p>Cihazınızda, yalnızca uygulamanın özel alanında şu tercihler saklanır: dil, vurgu rengi, titreşim tercihi, hatırlatma günü/saati, açılış sayısı (reklam sıklığını sınırlamak için), son analiz zamanı ve özeti (toplam boyut ve kopya grubu sayısı — haftalık hatırlatmanın yalnızca gerektiğinde gösterilmesi için) ve son çöp kutusuna taşıma işleminin geri alınabilmesi için ilgili dosyaların sistem içi bağlantıları (MediaStore URI). Bu veriler cihazdan çıkmaz; uygulama kaldırıldığında veya Android ayarlarından uygulama verileri silindiğinde silinir.</p>
+    <p>Cihazınızda, yalnızca uygulamanın özel alanında şu tercihler saklanır: dil, vurgu rengi, titreşim ve "animasyonları azalt" tercihi, büyük dosya eşiği ve liste sıralaması, tanıtımın gösterildiği bilgisi, hatırlatma günü/saati, açılış sayısı, son geçiş reklamının zamanı ve o günkü reklam sayısı (reklam sıklığını sınırlamak için), şimdiye kadar çöp kutusuna taşıdığınız toplam boyut (ana ekrandaki sayaç için), cihazın kullanılan/toplam depolama miktarının tarihli örnekleri (en çok 120 kayıt; ana ekrandaki "depolama eğilimi" grafiği için — yalnızca cihazda tutulur), son analiz zamanı ve özeti (toplam boyut, kopya grubu sayısı ve en çok yer kaplayan kategorinin adı/boyutu — haftalık hatırlatmanın yalnızca gerektiğinde ve anlamlı bir metinle gösterilmesi için) ve son çöp kutusuna taşıma işleminin geri alınabilmesi için ilgili dosyaların sistem içi bağlantıları (MediaStore URI). Bu veriler cihazdan çıkmaz; uygulama kaldırıldığında veya Android ayarlarından uygulama verileri silindiğinde silinir.</p>
 
     <h2>2. Reklamlar (Google AdMob)</h2>
-    <p>Düzen'i ücretsiz sunabilmek için Google LLC'nin <strong>Google Mobile Ads SDK</strong> (AdMob) hizmetini kullanırız. Reklamlar liste ekranlarının altında banner olarak ve zaman zaman bir işlem tamamlandıktan sonra tam ekran olarak gösterilir. Reklam sunmak, sıklığını sınırlamak, ölçmek ve kötüye kullanımı önlemek için Google aşağıdaki verileri toplayabilir ve işleyebilir:</p>
+    <p>Düzen'i ücretsiz sunabilmek için Google LLC'nin <strong>Google Mobile Ads SDK</strong> (AdMob) hizmetini kullanırız. Reklamlar sonuç listelerinin altında ve (analiz sonuçları varken) ana ekranın altında banner olarak, ayrıca en az 100 MB yer açan bir taşıma işleminden sonra, günde en çok iki kez ve zaman zaman bir işlem tamamlandıktan sonra tam ekran olarak gösterilir. Reklam sunmak, sıklığını sınırlamak, ölçmek ve kötüye kullanımı önlemek için Google aşağıdaki verileri toplayabilir ve işleyebilir:</p>
     <ul>
       <li><strong>Reklam kimliği</strong> (Android Advertising ID) ve uygulama kümesi kimliği gibi cihaz tanımlayıcıları,</li>
       <li><strong>Cihaz bilgileri</strong> (model, işletim sistemi sürümü, dil, ekran boyutu, ağ türü),</li>
@@ -78,6 +78,7 @@
     <div class="table-wrap"><table>
       <tr><th>İzin</th><th>Amaç</th></tr>
       <tr><td><code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Fotoğraf, video ve ses dosyalarınızın boyut ve tarih bilgilerini analiz etmek; kopyaları cihazda karşılaştırmak; önizleme küçük resimleri göstermek.</td></tr>
+      <tr><td><code>READ_MEDIA_VISUAL_USER_SELECTED</code> (Android 14+)</td><td>Tüm fotoğraflara erişim yerine yalnızca seçtiğiniz fotoğraf ve videoları kullanmanıza izin vermek (kısmi erişim). Yalnızca bu seçilenler analiz edilir.</td></tr>
       <tr><td><code>READ_EXTERNAL_STORAGE</code> (yalnızca Android 12L ve öncesi)</td><td>Aynı amaç; eski Android sürümlerinde medya okumanın tek yolu.</td></tr>
       <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Yalnızca reklamları (Google AdMob) ve reklam rıza formunu yüklemek. Dosyalarınız veya analiz sonuçları internete gönderilmez.</td></tr>
       <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Google AdMob'un reklam sunumu ve ölçümü için reklam kimliğini okuması.</td></tr>
@@ -88,7 +89,7 @@
     <p>Düzen, tüm dosyalara erişim (<code>MANAGE_EXTERNAL_STORAGE</code>), yüklü uygulamaları listeleme (<code>QUERY_ALL_PACKAGES</code>), konum, kişiler, kamera veya mikrofon izni istemez. İzinleri istediğiniz zaman Android ayarlarından geri alabilirsiniz.</p>
 
     <h2>4. Dosyaların silinmesi</h2>
-    <p>Düzen hiçbir dosyayı kendiliğinden silmez. Seçtiğiniz dosyalar yalnızca Android'in kendi onay penceresinde izin verdiğinizde sistem çöp kutusuna taşınır (Android 11+). Çöp kutusundaki dosyalar Android tarafından yaklaşık 30 gün sonra kalıcı olarak silinir; bu süre içinde uygulamadaki "Geri al" düğmesiyle veya çöp kutusunu gösteren dosya/galeri uygulamalarıyla geri alınabilir. Android 10 ve öncesinde uygulama dosyayı yalnızca sistem uygulamasında açar; silme işlemini o uygulamada siz yaparsınız.</p>
+    <p>Düzen hiçbir dosyayı kendiliğinden silmez. Seçtiğiniz dosyalar yalnızca Android'in kendi onay penceresinde izin verdiğinizde sistem çöp kutusuna taşınır (Android 11+). Çöp kutusundaki dosyalar Android tarafından yaklaşık 30 gün sonra kalıcı olarak silinir; bu süre içinde uygulamadaki "Geri al" düğmesiyle (kalan süre gösterilir) veya çöp kutusunu gösteren dosya/galeri uygulamalarıyla geri alınabilir. Dosyalar çöp kutusundayken boş alan hemen artmaz; alan, çöp kutusu boşaldığında açılır. Android 10 ve öncesinde uygulama dosyayı yalnızca sistem uygulamasında açar; silme işlemini o uygulamada siz yaparsınız.</p>
 
     <h2>5. Paylaşım ve satış</h2>
     <p>Geliştirici hiçbir kişisel veriyi satmaz. Dosyalarınız, dosya adları ve analiz sonuçları kimseyle paylaşılmaz. Reklam için gereken cihaz tanımlayıcıları ve cihaz/ağ bilgileri, yukarıda açıklandığı gibi yalnızca reklam sağlayıcısı Google ile paylaşılır. Uygulamada ayrıca analiz (analytics) veya çökme raporlama aracı, hesap sistemi ya da geliştiriciye ait sunucu yoktur.</p>
@@ -105,7 +106,7 @@
 
   <section class="policy" id="en" lang="en">
     <h2>Privacy Policy</h2>
-    <p class="sub">Effective date: 16 November 2026 · App version 1.1.0</p>
+    <p class="sub">Effective date: 24 November 2026 · App version 1.1.3</p>
 
     <div class="box"><strong>Summary:</strong> Düzen performs all file analysis on your device; your files, file names and analysis results are never sent to the developer or any third party. The app is free and shows <strong>Google AdMob</strong> ads. For ads, the app connects to the internet and Google processes data such as the advertising ID, device information and IP address. The app has no account system and no developer-operated server.</div>
 
@@ -113,10 +114,10 @@
     <p>For the photos, videos and audio files in Android's media library (MediaStore), Düzen reads the following <strong>on your device only</strong>: file name, size, creation/modification date, type and folder. This is used to list large files, screenshots, WhatsApp/Telegram media and old downloads.</p>
     <p>To find exact duplicates, only files of identical size are read on the device and turned into a SHA-256 fingerprint. Fingerprints and scan results are kept in memory only while the app is open; they are not written to storage and never leave the device. This file information is never used for advertising and is never passed to the ads SDK.</p>
     <p>The app also shows the total and free space of internal storage (Android StatFs).</p>
-    <p>The following preferences are stored on your device in the app's private storage: language, accent color, vibration preference, reminder day/time, launch count (to limit how often ads appear), last analysis time and summary (total size and number of duplicate groups — so the weekly reminder only appears when useful), and the system references (MediaStore URIs) of the files from the most recent move to trash so it can be undone. They never leave the device and are removed when you uninstall the app or clear its data in Android settings.</p>
+    <p>The following preferences are stored on your device in the app's private storage: language, accent color, vibration and "reduce animations" preferences, large-file threshold and list sorting, whether the intro was shown, reminder day/time, launch count (to limit how often ads appear), the total size you have moved to the trash so far (for the counter on the home screen), dated samples of used/total device storage (up to 120 entries; for the "storage trend" chart on the home screen — kept on the device only), last analysis time and summary (total size, number of duplicate groups and the name/size of the category taking the most space — so the weekly reminder only appears when useful and reads meaningfully), and the system references (MediaStore URIs) of the files from the most recent move to trash so it can be undone. They never leave the device and are removed when you uninstall the app or clear its data in Android settings.</p>
 
     <h2>2. Advertising (Google AdMob)</h2>
-    <p>To offer Düzen for free we use the <strong>Google Mobile Ads SDK</strong> (AdMob) from Google LLC. Ads appear as a banner at the bottom of list screens and occasionally as a full-screen ad after an action has finished. To serve ads, limit their frequency, measure them and prevent abuse, Google may collect and process:</p>
+    <p>To offer Düzen for free we use the <strong>Google Mobile Ads SDK</strong> (AdMob) from Google LLC. Ads appear as a banner at the bottom of result lists and of the home screen (once analysis results are shown), and occasionally as a full-screen ad after a move that frees at least 100 MB, at most twice a day. To serve ads, limit their frequency, measure them and prevent abuse, Google may collect and process:</p>
     <ul>
       <li>Device identifiers such as the <strong>advertising ID</strong> (Android Advertising ID) and app set ID,</li>
       <li><strong>Device information</strong> (model, OS version, language, screen size, network type),</li>
@@ -132,6 +133,7 @@
     <div class="table-wrap"><table>
       <tr><th>Permission</th><th>Purpose</th></tr>
       <tr><td><code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>READ_MEDIA_AUDIO</code> (Android 13+)</td><td>Analyze the size and dates of your photos, videos and audio files; compare duplicates on the device; show preview thumbnails.</td></tr>
+      <tr><td><code>READ_MEDIA_VISUAL_USER_SELECTED</code> (Android 14+)</td><td>Lets you share only the photos and videos you pick instead of the whole library (partial access). Only those selected items are analyzed.</td></tr>
       <tr><td><code>READ_EXTERNAL_STORAGE</code> (Android 12L and earlier only)</td><td>Same purpose; the only way to read media on older Android versions.</td></tr>
       <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Only to load ads (Google AdMob) and the ad consent form. Your files and analysis results are never sent over the internet.</td></tr>
       <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Lets Google AdMob read the advertising ID to serve and measure ads.</td></tr>
@@ -142,7 +144,7 @@
     <p>Düzen does not request all-files access (<code>MANAGE_EXTERNAL_STORAGE</code>), package listing (<code>QUERY_ALL_PACKAGES</code>), location, contacts, camera or microphone permissions. You can revoke permissions at any time in Android settings.</p>
 
     <h2>4. Deleting files</h2>
-    <p>Düzen never deletes files on its own. Files you select are moved to the system trash only after you allow it in Android's own confirmation dialog (Android 11+). Android permanently deletes trashed files after about 30 days; until then they can be restored with the in-app "Undo" button or with file/gallery apps that show the trash. On Android 10 and earlier the app only opens the file in a system app, where you delete it yourself.</p>
+    <p>Düzen never deletes files on its own. Files you select are moved to the system trash only after you allow it in Android's own confirmation dialog (Android 11+). Android permanently deletes trashed files after about 30 days; until then they can be restored with the in-app "Undo" button (the remaining time is shown) or with file/gallery apps that show the trash. While files are in the trash, free space does not grow right away; the space opens up once the trash is emptied. On Android 10 and earlier the app only opens the file in a system app, where you delete it yourself.</p>
 
     <h2>5. Sharing and sale</h2>
     <p>The developer does not sell any personal data. Your files, file names and analysis results are not shared with anyone. The device identifiers and device/network information needed for ads are shared only with the ad provider Google, as described above. The app contains no separate analytics or crash-reporting tool, account system or developer-operated server.</p>
